@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>제이씨이앤씨(JCENC) — 비개착 T.S.M 강관추진 · EGR 약액주입 전문</title>
+<meta name="description" content="제이씨이앤씨는 비개착 T.S.M 강관추진공법과 EGR 약액주입공법으로 철도·도로 하부통과, 지하차도, 통로박스를 시공하는 특수공법 전문 기업입니다.">
+<style>
+:root{
+  --navy:#0e1b2c; --navy2:#16283f; --steel:#3d5470; --line:#e3e8ef;
+  --ink:#1c2733; --sub:#5a6b7e; --bg:#ffffff; --bg2:#f4f6f9;
+  --accent:#e8630a; --accent2:#f5820f;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Pretendard','Malgun Gothic','Apple SD Gothic Neo',-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;word-break:keep-all}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(14,27,44,.92);backdrop-filter:blur(8px);color:#fff}
+.hd{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-size:1.25rem;font-weight:800;letter-spacing:.02em}
+.logo em{font-style:normal;color:var(--accent2)}
+.logo small{display:block;font-size:.62rem;font-weight:500;letter-spacing:.28em;color:#9fb0c4}
+nav{display:flex;gap:26px;font-size:.92rem}
+nav a{color:#c8d4e2;transition:color .2s}
+nav a:hover{color:#fff}
+@media(max-width:640px){nav{gap:14px;font-size:.8rem}}
+
+/* hero */
+.hero{position:relative;color:#fff;min-height:78vh;display:flex;align-items:center;
+  background:linear-gradient(rgba(10,20,34,.72),rgba(10,20,34,.55)),url('img/hero.jpg') center/cover no-repeat}
+.hero .wrap{padding-top:70px;padding-bottom:70px}
+.hero .tag{display:inline-block;background:var(--accent);color:#fff;font-size:.8rem;font-weight:700;padding:5px 14px;border-radius:99px;margin-bottom:20px;letter-spacing:.05em}
+.hero h1{font-size:clamp(1.7rem,4.6vw,3rem);font-weight:800;line-height:1.3;margin-bottom:18px}
+.hero p{font-size:clamp(.95rem,1.8vw,1.15rem);color:#d6e0eb;max-width:560px;margin-bottom:32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 28px;border-radius:6px;font-weight:700;font-size:.95rem;transition:.2s}
+.btn-a{background:var(--accent);color:#fff}
+.btn-a:hover{background:var(--accent2)}
+.btn-b{border:1px solid rgba(255,255,255,.5);color:#fff}
+.btn-b:hover{background:rgba(255,255,255,.12)}
+
+/* section shell */
+section{padding:84px 0}
+section.alt{background:var(--bg2)}
+.sec-tag{color:var(--accent);font-weight:800;font-size:.85rem;letter-spacing:.14em;margin-bottom:8px}
+h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;margin-bottom:14px}
+.lead{color:var(--sub);max-width:680px;margin-bottom:44px}
+
+/* 사업영역 */
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 22px}
+.card .num{font-size:.78rem;font-weight:800;color:var(--accent);letter-spacing:.1em;margin-bottom:10px}
+.card h3{font-size:1.05rem;font-weight:800;margin-bottom:8px}
+.card p{font-size:.88rem;color:var(--sub)}
+
+/* 공법 */
+.method{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+@media(max-width:800px){.method{grid-template-columns:1fr}}
+.method img{border-radius:12px;border:1px solid var(--line)}
+.method h3{font-size:1.35rem;font-weight:800;margin-bottom:6px}
+.method .en{color:var(--sub);font-size:.85rem;margin-bottom:18px}
+.feat{list-style:none;display:grid;gap:10px}
+.feat li{position:relative;padding-left:26px;font-size:.94rem}
+.feat li::before{content:"";position:absolute;left:0;top:9px;width:14px;height:3px;background:var(--accent);border-radius:2px}
+.feat b{color:var(--navy)}
+.m-gap{height:70px}
+
+/* 스펙 배너 */
+.specs{margin-top:64px;background:var(--navy);border-radius:14px;color:#fff;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;overflow:hidden}
+.spec{background:var(--navy2);padding:26px 20px;text-align:center}
+.spec .v{font-size:1.45rem;font-weight:800;color:var(--accent2)}
+.spec .k{font-size:.82rem;color:#a9bacd;margin-top:4px}
+
+/* 갤러리 */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.gal figure{position:relative;border-radius:12px;overflow:hidden}
+.gal img{height:230px;width:100%;object-fit:cover;transition:transform .35s}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(10,20,34,.85));color:#fff;font-size:.85rem;padding:26px 16px 12px}
+
+/* 실적 */
+.proj{display:grid;gap:14px}
+.prow{display:grid;grid-template-columns:1fr auto;gap:16px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 26px;align-items:center}
+.prow h3{font-size:1.02rem;font-weight:800;margin-bottom:4px}
+.prow .meta{font-size:.86rem;color:var(--sub)}
+.prow .chip{background:var(--bg2);border:1px solid var(--line);color:var(--steel);font-size:.78rem;font-weight:700;padding:6px 12px;border-radius:99px;white-space:nowrap}
+@media(max-width:640px){.prow{grid-template-columns:1fr}}
+
+/* 문의 */
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.cbox{background:var(--navy2);border-radius:12px;padding:26px 24px;color:#fff}
+.cbox .t{font-size:.8rem;font-weight:800;color:var(--accent2);letter-spacing:.12em;margin-bottom:10px}
+.cbox p{font-size:.92rem;color:#d6e0eb}
+.cbox a{color:#fff;font-weight:700}
+#contact{background:var(--navy);color:#fff}
+#contact h2{color:#fff}
+#contact .lead{color:#a9bacd}
+
+footer{background:#0a1421;color:#7f92a8;font-size:.82rem;padding:26px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="#top"><em>JC</em>ENC<small>제이씨이앤씨</small></a>
+    <nav>
+      <a href="#about">사업영역</a>
+      <a href="#method">공법소개</a>
+      <a href="#works">시공실적</a>
+      <a href="#contact">문의</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <span class="tag">비개착 특수공법 전문</span>
+    <h1>도로와 철도를 멈추지 않고,<br>그 아래에 길을 만듭니다</h1>
+    <p>제이씨이앤씨는 비개착 T.S.M 강관추진공법과 EGR 약액주입공법으로
+    철도·도로 하부통과, 지하차도, 통로박스 구조물을 시공하는 특수공법 전문 기업입니다.</p>
+    <div class="btns">
+      <a class="btn btn-a" href="#method">공법 소개 보기</a>
+      <a class="btn btn-b" href="#contact">시공 문의</a>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-tag">BUSINESS</div>
+    <h2>사업영역</h2>
+    <p class="lead">교통을 차단하지 않고 지하 구조물을 완성하는 비개착 공법으로,
+    개착이 불가능한 현장의 문제를 해결합니다.</p>
+    <div class="grid4">
+      <div class="card"><div class="num">01</div><h3>철도 하부통과</h3>
+        <p>운행 중인 철도 아래를 비개착으로 횡단하여 통로·관로 구조물을 설치합니다.</p></div>
+      <div class="card"><div class="num">02</div><h3>지하차도 · 통로박스</h3>
+        <p>도로 하부에 BOX 구조물을 추진하여 지하차도, 통로암거, 진입도로를 시공합니다.</p></div>
+      <div class="card"><div class="num">03</div><h3>인입관로 · 도수시설</h3>
+        <p>대구경 강관 추진으로 상수도 도수관로, 우수 BOX, 인입관로를 관통 시공합니다.</p></div>
+      <div class="card"><div class="num">04</div><h3>약액주입 · 그라우팅</h3>
+        <p>친환경 EGR 공법으로 지반 보강과 차수 그라우팅을 수행합니다. (EGR·SGR·LW)</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="method">
+  <div class="wrap">
+    <div class="sec-tag">TECHNOLOGY</div>
+    <h2>공법소개</h2>
+    <p class="lead">강관을 수평으로 추진해 구조물을 형성하는 T.S.M 공법과
+    친환경 지반주입 EGR 공법, 두 개의 축으로 시공합니다.</p>
+
+    <div class="method">
+      <div>
+        <h3>T.S.M 비개착 공법</h3>
+        <div class="en">Tunnel of using Steel pipe Method — 강관추진 구조물 공법</div>
+        <ul class="feat">
+          <li>다수의 강관을 압입한 뒤 내부를 굴착, <b>H-BEAM + 철근콘크리트 합성 구조물</b>을 형성</li>
+          <li><b>최소 토피 시공</b> — 도로 표층 기준 1m, 철도 노반 기준 0.5m</li>
+          <li>강관 사이 격벽철판 일체화로 <b>별도 방수재 없이 확실한 방수</b></li>
+          <li>대구경 강관(D1,500~2,300)으로 토질 변화·지장물 출현 시 대처 용이, <b>전 토층 적용</b></li>
+          <li>선도관 조정장치로 <b>곡선 선형(R=60m) 정밀 시공</b> 가능</li>
+        </ul>
+      </div>
+      <img src="img/concept.jpg" alt="T.S.M 공법 구조 개념도 — 강관 다발 내부에 철근콘크리트 박스 구조물 형성">
+    </div>
+
+    <div class="m-gap"></div>
+
+    <div class="method">
+      <img src="img/tunnel.jpg" alt="추진 완료된 대구경 강관 내부">
+      <div>
+        <h3>EGR 약액주입 공법</h3>
+        <div class="en">Eco Grouting Rocket System — 특허 친환경 그라우팅</div>
+        <ul class="feat">
+          <li>실리카졸계 <b>저압 침투주입</b>으로 지반 고결·차수 성능을 높이는 친환경 공법 (특허 보유)</li>
+          <li>Gel-Time 수초~수분 조절로 <b>대상 토질에 맞는 한정주입</b>, 차수 효과 극대화</li>
+          <li>고결강도 20~60kg/㎠, 해수·지하수 수질의 영향 없이 <b>반영구적 내구성</b></li>
+          <li>용탈 현상을 최소화하여 <b>지하수 오염 저감</b> — 기존 SGR·LW 공법 대비 개량</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="specs">
+      <div class="spec"><div class="v">D2,300</div><div class="k">최대급 대구경 강관 추진</div></div>
+      <div class="spec"><div class="v">0.5m</div><div class="k">최소 토피고 (철도 노반 기준)</div></div>
+      <div class="spec"><div class="v">173.8m</div><div class="k">단일 구간 최장 추진 실적</div></div>
+      <div class="spec"><div class="v">R=60m</div><div class="k">곡선 선형 시공 실적</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="site">
+  <div class="wrap">
+    <div class="sec-tag">ON SITE</div>
+    <h2>시공 현장</h2>
+    <p class="lead">추진기지 설치부터 강관 추진, 내부 굴착, 구조물 완성까지 —
+    현장에서 검증된 시공 능력입니다.</p>
+    <div class="gal">
+      <figure><img src="img/pipes.jpg" alt="추진기지의 대구경 강관"><figcaption>대구경 강관 추진 — 추진기지</figcaption></figure>
+      <figure><img src="img/jobsite.jpg" alt="추진기지 가시설 현장"><figcaption>추진기지 가시설 설치</figcaption></figure>
+      <figure><img src="img/complete.jpg" alt="완성된 하부통과 구조물"><figcaption>하부통과 구조물 완성</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="works">
+  <div class="wrap">
+    <div class="sec-tag">PROJECTS</div>
+    <h2>주요 시공실적</h2>
+    <p class="lead">LH·민자철도·고속도로 등 국가 기간시설 하부에서 시공을 완수했습니다.</p>
+    <div class="proj">
+      <div class="prow">
+        <div>
+          <h3>고양 향동·덕은지구 공급처리시설 건설공사</h3>
+          <div class="meta">한국토지주택공사(LH) · 철도 하부통과 · 연장 173.8m / 141.0m / 125.6m · 추진관경 D1,430</div>
+        </div><span class="chip">철도 하부통과</span>
+      </div>
+      <div class="prow">
+        <div>
+          <h3>대곡~소사 복선전철 민간투자시설사업</h3>
+          <div class="meta">철도 하부통과 · 연장 85.2m · 구조물 B6.0×H5.5m · 토피고 3.0m</div>
+        </div><span class="chip">철도 하부통과</span>
+      </div>
+      <div class="prow">
+        <div>
+          <h3>동대구역 복합환승센터 건립사업</h3>
+          <div class="meta">연암·경암 구간 · 연장 106.2m (곡선 R=60m) · 구조물 B5.1×H3.0m · 토피고 10.0m</div>
+        </div><span class="chip">암반 · 곡선 시공</span>
+      </div>
+      <div class="prow">
+        <div>
+          <h3>평택~부여~익산(서부내륙) 고속도로 민간투자사업</h3>
+          <div class="meta">토사 구간 · 연장 15.0m · 구조물 B25.9×H5.2m (초대형 단면) · 토피고 4.0m</div>
+        </div><span class="chip">고속도로 횡단</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-tag">CONTACT</div>
+    <h2>시공 문의</h2>
+    <p class="lead">비개착 하부통과, 공법 선정, 견적 검토 — 어떤 단계든 연락 주시면
+    현장 조건에 맞는 공법을 제안드립니다.</p>
+    <div class="contact">
+      <div class="cbox"><div class="t">TEL</div>
+        <p><a href="tel:051-702-2929">051-702-2929</a><br><a href="tel:010-6771-9999">010-6771-9999</a></p></div>
+      <div class="cbox"><div class="t">E-MAIL</div>
+        <p><a href="mailto:jcenc2025@naver.com">jcenc2025@naver.com</a></p></div>
+      <div class="cbox"><div class="t">본사</div>
+        <p>부산광역시 해운대구 세실로 43,<br>지하층 116호</p></div>
+      <div class="cbox"><div class="t">서울사무소</div>
+        <p>서울특별시 종로구 세종대로 149,<br>2층 2031호</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 제이씨이앤씨(JCENC). All rights reserved.</div>
+    <div>비개착 T.S.M 강관추진 · EGR 약액주입 전문</div>
+  </div>
+</footer>
+
+</body>
+</html>
