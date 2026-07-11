@@ -8,153 +8,146 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 :root{
-  --black:#0b0d10; --black2:#13161b; --white:#ffffff; --paper:#f4f5f7;
-  --ink:#15181d; --sub:#6b7683; --sub-d:#9aa5b1; --line:#e2e5e9; --line-d:rgba(255,255,255,.14);
-  --blue:#1c69d4; --blue-hi:#3f86e8;
+  --white:#ffffff; --gray:#f5f5f7; --dark:#000000; --dark2:#161617;
+  --ink:#1d1d1f; --sub:#6e6e73; --sub-d:#86868b;
+  --blue:#0071e3; --blue-dk:#0077ed;
+  --r:28px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Pretendard Variable',Pretendard,'Malgun Gothic','Apple SD Gothic Neo',-apple-system,sans-serif;
-  color:var(--ink);background:var(--white);line-height:1.7;word-break:keep-all;font-weight:400}
+  color:var(--ink);background:var(--white);line-height:1.6;word-break:keep-all;
+  -webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
-.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+.wrap-n{max-width:760px;margin:0 auto;padding:0 22px}
 
-.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--blue)}
-h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:250;letter-spacing:-.01em;line-height:1.25;margin:14px 0 18px;text-wrap:balance}
-.lead{color:var(--sub);max-width:620px;font-size:1.02rem;margin-bottom:64px}
+/* ── nav ── */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.72);
+  backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px)}
+.hd{max-width:1040px;margin:0 auto;padding:0 22px;height:48px;
+  display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.02rem;font-weight:700;letter-spacing:-.01em}
+.logo span{color:var(--sub);font-weight:500;font-size:.78rem;margin-left:8px;letter-spacing:.06em}
+nav{display:flex;gap:clamp(14px,3vw,30px);font-size:.8rem;color:#424245}
+nav a:hover{color:var(--dark)}
 
-/* ── header ── */
-header{position:fixed;inset:0 0 auto;z-index:100;transition:background .35s,border-color .35s;
-  border-bottom:1px solid transparent}
-header.solid{background:rgba(11,13,16,.9);backdrop-filter:blur(12px);border-color:var(--line-d)}
-.hd{display:flex;align-items:center;justify-content:space-between;height:72px;color:#fff}
-.logo{display:flex;align-items:baseline;gap:12px}
-.logo .mark{font-size:1.3rem;font-weight:800;letter-spacing:.06em}
-.logo .mark b{color:var(--blue-hi);font-weight:800}
-.logo .kr{font-size:.7rem;letter-spacing:.3em;color:var(--sub-d)}
-nav{display:flex;gap:clamp(16px,3vw,38px);font-size:.85rem;font-weight:500}
-nav a{color:#cfd6dd;padding:6px 0;border-bottom:1px solid transparent;transition:.25s}
-nav a:hover{color:#fff;border-color:var(--blue-hi)}
-@media(max-width:640px){.logo .kr{display:none}nav{font-size:.76rem}}
+/* ── type ── */
+.eyebrow{font-size:.95rem;font-weight:650;color:var(--blue);margin-bottom:10px}
+h2{font-size:clamp(2rem,5vw,3.3rem);font-weight:700;letter-spacing:-.022em;line-height:1.12;text-wrap:balance}
+.sub{font-size:clamp(1.02rem,2vw,1.3rem);color:var(--sub);font-weight:450;margin-top:16px;text-wrap:balance}
+.center{text-align:center}
+.link{color:var(--blue);font-weight:500}
+.link:hover{text-decoration:underline}
 
-/* ── hero ── */
-.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;
-  background:linear-gradient(160deg,rgba(11,13,16,.62) 0%,rgba(11,13,16,.18) 45%,rgba(11,13,16,.78) 100%),
-  url('img/hero.jpg') center/cover no-repeat}
-.hero .wrap{width:100%;padding-bottom:clamp(56px,9vh,110px)}
-.hero .eyebrow{color:var(--blue-hi)}
-.hero h1{font-size:clamp(2.1rem,6vw,4.4rem);font-weight:200;line-height:1.18;letter-spacing:-.015em;
-  margin:20px 0 24px;max-width:820px;text-wrap:balance}
-.hero h1 b{font-weight:600}
-.hero p{color:#c3ccd6;max-width:540px;font-size:clamp(.92rem,1.6vw,1.05rem);font-weight:300}
-.hero .cta{display:flex;gap:2px;margin-top:44px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 34px;font-size:.88rem;font-weight:600;
-  letter-spacing:.04em;transition:.25s}
-.btn .ar{font-family:inherit;transition:transform .25s}
-.btn:hover .ar{transform:translateX(4px)}
-.btn-blue{background:var(--blue);color:#fff}
-.btn-blue:hover{background:var(--blue-hi)}
-.btn-ghost{background:rgba(255,255,255,.08);color:#fff;backdrop-filter:blur(4px)}
-.btn-ghost:hover{background:rgba(255,255,255,.18)}
-.scroll-hint{position:absolute;right:clamp(20px,4vw,56px);bottom:clamp(56px,9vh,110px);
-  writing-mode:vertical-rl;font-size:.68rem;letter-spacing:.3em;color:#8f9aa6;display:flex;align-items:center;gap:14px}
-.scroll-hint::after{content:"";width:1px;height:56px;background:linear-gradient(#8f9aa6,transparent)}
-@media(max-width:900px){.scroll-hint{display:none}}
+/* ── hero (dark, pro 페이지 스타일) ── */
+.hero{background:var(--dark);color:#f5f5f7;padding:110px 0 0;overflow:hidden}
+.hero .eyebrow{color:#2997ff;font-size:1rem}
+.hero h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:700;letter-spacing:-.025em;line-height:1.08;text-wrap:balance}
+.hero .sub{color:#a1a1a6;max-width:600px;margin:20px auto 0}
+.hero .cta{display:flex;gap:16px;justify-content:center;margin:34px 0 64px;flex-wrap:wrap}
+.pill{display:inline-block;padding:13px 26px;border-radius:980px;font-size:1rem;font-weight:500;transition:.2s}
+.pill-blue{background:var(--blue);color:#fff}
+.pill-blue:hover{background:var(--blue-dk)}
+.pill-line{border:1px solid #86868b;color:#f5f5f7}
+.pill-line:hover{border-color:#f5f5f7}
+.hero-img{max-width:1040px;margin:0 auto;padding:0 22px}
+.hero-img img{width:100%;border-radius:var(--r) var(--r) 0 0;display:block}
 
-/* ── spec strip (차량 제원표 느낌) ── */
-.strip{background:var(--black);color:#fff;border-top:1px solid var(--line-d)}
-.strip .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-.sp{padding:38px 28px;border-left:1px solid var(--line-d)}
-.sp:first-child{border-left:none}
-.sp .v{font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:200;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
-.sp .v b{font-weight:600;color:var(--blue-hi)}
-.sp .k{font-size:.74rem;letter-spacing:.14em;color:var(--sub-d);margin-top:6px;text-transform:uppercase}
-@media(max-width:860px){.sp{border-left:none;border-top:1px solid var(--line-d);padding:26px 0}}
+/* ── stat row ── */
+.stats{background:var(--dark);color:#f5f5f7;padding:80px 0 96px}
+.stats .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:44px 20px;text-align:center}
+.st .v{font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-.02em;
+  background:linear-gradient(90deg,#2997ff,#5ac8fa);-webkit-background-clip:text;background-clip:text;color:transparent;
+  font-variant-numeric:tabular-nums}
+.st .k{font-size:.9rem;color:#a1a1a6;margin-top:8px}
 
 /* ── sections ── */
-section{padding:clamp(90px,12vh,150px) 0}
-.dark{background:var(--black);color:#fff}
-.dark h2{color:#fff}
-.dark .lead{color:var(--sub-d)}
-.paper{background:var(--paper)}
+section{padding:clamp(90px,11vh,140px) 0}
+section.gray{background:var(--gray)}
+.sec-head{max-width:760px;margin:0 auto clamp(48px,7vh,80px);text-align:center;padding:0 22px}
 
-/* 사업영역: 번호 없는 하어라인 리스트 */
-.fields{border-top:1px solid var(--line)}
-.field{display:grid;grid-template-columns:minmax(200px,340px) 1fr;gap:24px;
-  padding:34px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.field h3{font-size:1.3rem;font-weight:550;letter-spacing:-.01em}
-.field p{color:var(--sub);font-size:.95rem;max-width:640px}
-@media(max-width:700px){.field{grid-template-columns:1fr;gap:6px}}
+/* 사업영역 카드 */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px}
+.card{background:var(--white);border-radius:var(--r);padding:44px 38px;transition:transform .35s ease,box-shadow .35s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(0,0,0,.08)}
+.card h3{font-size:1.4rem;font-weight:700;letter-spacing:-.015em;margin-bottom:10px}
+.card p{color:var(--sub);font-size:.98rem}
+.card .ic{font-size:.8rem;font-weight:700;letter-spacing:.12em;color:var(--blue);text-transform:uppercase;margin-bottom:18px}
 
-/* 공법 */
-.tech{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:center}
-.tech + .tech{margin-top:clamp(80px,10vh,130px)}
-.tech.rev > .txt{order:2}
-@media(max-width:840px){.tech{grid-template-columns:1fr}.tech.rev > .txt{order:0}}
-.tech img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:saturate(.92)}
-.tech .name{font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:300;margin:12px 0 4px}
-.tech .name b{font-weight:650}
-.tech .en{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sub-d);margin-bottom:28px}
-.feat{list-style:none;border-top:1px solid var(--line-d)}
-.feat li{padding:15px 0 15px 30px;border-bottom:1px solid var(--line-d);font-size:.93rem;
-  font-weight:300;color:#c3ccd6;position:relative}
-.feat li::before{content:"";position:absolute;left:2px;top:26px;width:16px;height:1px;background:var(--blue-hi)}
-.feat b{color:#fff;font-weight:600}
+/* 공법: 큰 라운드 피처 블록 */
+.feature{border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;min-height:520px}
+.feature + .feature{margin-top:24px}
+@media(max-width:820px){.feature{grid-template-columns:1fr}}
+.feature.dark{background:var(--dark2);color:#f5f5f7}
+.feature.light{background:var(--gray)}
+.f-txt{padding:clamp(38px,5vw,72px);display:flex;flex-direction:column;justify-content:center}
+.f-txt .tag{font-size:.95rem;font-weight:650;color:var(--blue);margin-bottom:12px}
+.feature.dark .f-txt .tag{color:#2997ff}
+.f-txt h3{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin-bottom:14px;text-wrap:balance}
+.f-txt .desc{color:var(--sub);font-size:1.02rem;margin-bottom:26px}
+.feature.dark .f-txt .desc{color:#a1a1a6}
+.f-list{list-style:none;display:grid;gap:11px;font-size:.94rem}
+.f-list li{padding-left:24px;position:relative;color:#424245}
+.feature.dark .f-list li{color:#d2d2d7}
+.f-list li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:var(--blue)}
+.feature.dark .f-list li::before{background:#2997ff}
+.f-list b{font-weight:650;color:var(--ink)}
+.feature.dark .f-list b{color:#fff}
+.f-img{min-height:320px;background-size:cover;background-position:center}
 
 /* 갤러리 */
-.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-@media(max-width:760px){.gal{grid-template-columns:1fr}}
-.gal figure{position:relative;overflow:hidden;background:var(--black2)}
-.gal img{height:min(34vw,320px);width:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1),opacity .4s;opacity:.92}
-@media(max-width:760px){.gal img{height:56vw}}
-.gal figure:hover img{transform:scale(1.045);opacity:1}
-.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 20px 14px;font-size:.78rem;
-  letter-spacing:.1em;color:#e6ebf0;background:linear-gradient(transparent,rgba(11,13,16,.82))}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px}
+.gal figure{border-radius:var(--r);overflow:hidden;position:relative}
+.gal img{height:300px;width:100%;object-fit:cover;transition:transform .5s ease}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 22px 16px;color:#fff;
+  font-size:.86rem;font-weight:500;background:linear-gradient(transparent,rgba(0,0,0,.55))}
 
-/* 실적: 제원표 스타일 테이블 */
-.projects{border-top:1px solid var(--line)}
-.pj{display:grid;grid-template-columns:88px 1fr auto;gap:clamp(14px,3vw,40px);
-  padding:30px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.pj .no{font-size:.8rem;color:var(--sub);font-variant-numeric:tabular-nums;letter-spacing:.1em}
-.pj h3{font-size:1.12rem;font-weight:550;margin-bottom:6px;letter-spacing:-.01em}
-.pj .meta{font-size:.86rem;color:var(--sub);font-weight:300}
-.pj .meta b{color:var(--ink);font-weight:600}
-.pj .tag{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);white-space:nowrap}
-@media(max-width:700px){.pj{grid-template-columns:1fr}.pj .no{display:none}}
+/* 실적 */
+.pjs{display:grid;gap:20px}
+.pj{background:var(--white);border-radius:var(--r);padding:38px 42px;
+  display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;
+  transition:transform .35s ease,box-shadow .35s ease}
+.pj:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(0,0,0,.08)}
+@media(max-width:680px){.pj{grid-template-columns:1fr;padding:30px 26px}}
+.pj h3{font-size:1.22rem;font-weight:700;letter-spacing:-.015em;margin-bottom:8px}
+.pj .meta{color:var(--sub);font-size:.94rem}
+.pj .meta b{color:var(--ink);font-weight:650}
+.pj .badge{font-size:.8rem;font-weight:650;color:var(--blue);background:rgba(0,113,227,.08);
+  padding:8px 16px;border-radius:980px;white-space:nowrap}
 
 /* 문의 */
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));border-top:1px solid var(--line-d)}
-.cb{padding:34px 28px 38px;border-bottom:1px solid var(--line-d);border-left:1px solid var(--line-d)}
-.cb:first-child{border-left:none}
-@media(max-width:860px){.cb{border-left:none;padding:26px 0}}
-.cb .t{font-size:.7rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--blue-hi);margin-bottom:14px}
-.cb p{font-size:.96rem;font-weight:300;color:#c3ccd6}
-.cb a{color:#fff;font-weight:500}
-.cb a:hover{color:var(--blue-hi)}
-.cb .big{font-size:1.35rem;font-weight:250;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.contact{background:var(--dark);color:#f5f5f7;text-align:center}
+.contact h2{color:#fff}
+.contact .sub{color:#a1a1a6}
+.c-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:56px}
+.c-card{background:var(--dark2);border-radius:22px;padding:34px 24px}
+.c-card .t{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#2997ff;margin-bottom:12px}
+.c-card p{color:#d2d2d7;font-size:.96rem}
+.c-card a{color:#fff;font-weight:600}
+.c-card a:hover{color:#2997ff}
+.c-card .big{font-size:1.3rem;font-variant-numeric:tabular-nums}
 
-footer{background:var(--black);color:var(--sub-d);font-size:.78rem;padding:34px 0;border-top:1px solid var(--line-d)}
-footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-weight:300;letter-spacing:.04em}
+footer{background:var(--gray);color:var(--sub);font-size:.78rem;padding:28px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 
 /* reveal */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .rv.on{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .rv{opacity:1;transform:none;transition:none}
-  .gal img,.btn .ar{transition:none}
+  .gal img,.card,.pj{transition:none}
 }
 </style>
 </head>
 <body>
 
-<header id="hd">
-  <div class="wrap hd">
-    <a class="logo" href="#top">
-      <span class="mark"><b>JC</b>ENC</span>
-      <span class="kr">제이씨이앤씨</span>
-    </a>
+<header>
+  <div class="hd">
+    <a class="logo" href="#top">JCENC<span>제이씨이앤씨</span></a>
     <nav>
       <a href="#about">사업영역</a>
       <a href="#method">공법</a>
@@ -164,150 +157,146 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   </div>
 </header>
 
-<div class="hero" id="top">
-  <div class="wrap">
-    <div class="eyebrow">Trenchless Technology</div>
-    <h1>도로와 철도를 멈추지 않고,<br>그 아래에 <b>길을 만듭니다</b></h1>
-    <p>비개착 T.S.M 강관추진공법과 EGR 약액주입공법 —
-    제이씨이앤씨는 국가 기간시설 하부를 관통하는 특수공법 전문 기업입니다.</p>
+<div class="hero center" id="top">
+  <div class="wrap-n">
+    <div class="eyebrow">비개착 특수공법</div>
+    <h1>도로 위는 그대로.<br>길은 그 아래에.</h1>
+    <p class="sub">열차가 달리고 차량이 흐르는 동안, 제이씨이앤씨는 그 아래에서
+    구조물을 완성합니다. T.S.M 강관추진과 EGR 약액주입 — 멈추지 않는 시공.</p>
     <div class="cta">
-      <a class="btn btn-blue" href="#method">공법 소개 <span class="ar">→</span></a>
-      <a class="btn btn-ghost" href="#contact">시공 문의 <span class="ar">→</span></a>
+      <a class="pill pill-blue" href="#method">공법 알아보기</a>
+      <a class="pill pill-line" href="#contact">시공 문의</a>
     </div>
   </div>
-  <div class="scroll-hint">SCROLL</div>
+  <div class="hero-img"><img src="img/hero.jpg" alt="강관 추진 후 지보 설치가 완료된 비개착 시공 현장"></div>
 </div>
 
-<div class="strip">
-  <div class="wrap">
-    <div class="sp rv"><div class="v">D<b>2,300</b></div><div class="k">대구경 강관 추진</div></div>
-    <div class="sp rv"><div class="v"><b>0.5</b>m</div><div class="k">최소 토피고 · 철도 노반</div></div>
-    <div class="sp rv"><div class="v"><b>173.8</b>m</div><div class="k">단일 구간 최장 추진</div></div>
-    <div class="sp rv"><div class="v">R=<b>60</b>m</div><div class="k">곡선 선형 시공</div></div>
+<div class="stats">
+  <div class="wrap grid">
+    <div class="st rv"><div class="v">D2,300</div><div class="k">대구경 강관 추진</div></div>
+    <div class="st rv"><div class="v">0.5m</div><div class="k">최소 토피고 · 철도 노반</div></div>
+    <div class="st rv"><div class="v">173.8m</div><div class="k">단일 구간 최장 추진</div></div>
+    <div class="st rv"><div class="v">R=60m</div><div class="k">곡선 선형 시공</div></div>
   </div>
 </div>
 
-<section id="about">
-  <div class="wrap">
-    <div class="eyebrow rv">Business</div>
-    <h2 class="rv">교통을 세우지 않는 시공,<br>비개착이 답이 되는 현장</h2>
-    <p class="lead rv">열차가 달리고 차량이 흐르는 그대로 — 지표를 열지 않고
-    지하 구조물을 완성합니다.</p>
-    <div class="fields">
-      <div class="field rv"><h3>철도 하부통과</h3>
-        <p>운행 중인 철도 아래를 비개착으로 횡단하여 통로·관로 구조물을 설치합니다. 열차 운행 중단 없이, 노반 침하 없이.</p></div>
-      <div class="field rv"><h3>지하차도 · 통로박스</h3>
-        <p>도로 하부에 BOX 구조물을 추진하여 지하차도, 통로암거, 단지 진입도로를 시공합니다.</p></div>
-      <div class="field rv"><h3>인입관로 · 도수시설</h3>
-        <p>대구경 강관 추진으로 상수도 도수관로, 우수 BOX, 인입관로를 관통 시공합니다.</p></div>
-      <div class="field rv"><h3>약액주입 · 그라우팅</h3>
-        <p>특허 EGR 공법으로 지반 보강과 차수 그라우팅을 수행합니다. EGR · SGR · LW.</p></div>
-    </div>
+<section class="gray" id="about">
+  <div class="sec-head rv">
+    <div class="eyebrow">사업영역</div>
+    <h2>파지 않습니다.<br>뚫고 나아갑니다.</h2>
+    <p class="sub">지표를 열 수 없는 현장 — 그곳이 저희가 일하는 곳입니다.</p>
+  </div>
+  <div class="wrap cards">
+    <div class="card rv"><div class="ic">Railway</div><h3>철도 하부통과</h3>
+      <p>운행 중인 철도 아래를 비개착으로 횡단합니다. 열차 운행 중단 없이, 노반 침하 없이.</p></div>
+    <div class="card rv"><div class="ic">Underpass</div><h3>지하차도 · 통로박스</h3>
+      <p>도로 하부에 BOX 구조물을 추진해 지하차도, 통로암거, 단지 진입도로를 시공합니다.</p></div>
+    <div class="card rv"><div class="ic">Pipeline</div><h3>인입관로 · 도수시설</h3>
+      <p>대구경 강관 추진으로 상수도 도수관로, 우수 BOX, 인입관로를 관통 시공합니다.</p></div>
+    <div class="card rv"><div class="ic">Grouting</div><h3>약액주입 · 그라우팅</h3>
+      <p>특허 EGR 공법으로 지반 보강과 차수 그라우팅을 수행합니다. EGR · SGR · LW.</p></div>
   </div>
 </section>
 
-<section class="dark" id="method">
+<section id="method">
+  <div class="sec-head rv">
+    <div class="eyebrow">공법</div>
+    <h2>두 개의 공법.<br>하나의 기준, 정밀함.</h2>
+    <p class="sub">강관을 수평으로 추진해 구조물을 만드는 T.S.M,
+    지반을 단단히 고결하는 친환경 그라우팅 EGR.</p>
+  </div>
   <div class="wrap">
-    <div class="eyebrow rv">Technology</div>
-    <h2 class="rv">두 개의 공법,<br>하나의 기준 — 정밀함</h2>
-    <p class="lead rv">강관을 수평으로 추진해 구조물을 형성하는 T.S.M,
-    지반을 고결하는 친환경 그라우팅 EGR.</p>
-
-    <div class="tech">
-      <div class="txt rv">
-        <div class="eyebrow" style="letter-spacing:.2em">01</div>
-        <div class="name"><b>T.S.M</b> 비개착 공법</div>
-        <div class="en">Tunnel of using Steel pipe Method</div>
-        <ul class="feat">
-          <li>다수의 강관 압입 후 내부 굴착 — <b>H-BEAM + 철근콘크리트 합성 구조물</b> 형성</li>
-          <li><b>최소 토피 시공</b> · 도로 표층 1m, 철도 노반 0.5m</li>
-          <li>강관 사이 격벽철판 일체화 — <b>별도 방수재 없는 확실한 방수</b></li>
-          <li>대구경 강관 D1,500~2,300 · <b>전 토층 적용</b>, 지장물 대처 용이</li>
+    <div class="feature dark rv">
+      <div class="f-txt">
+        <div class="tag">T.S.M — Tunnel of using Steel pipe Method</div>
+        <h3>강관이 곧<br>구조물이 됩니다</h3>
+        <p class="desc">다수의 강관을 압입하고 내부를 굴착해, H-BEAM과 철근콘크리트가
+        하나 된 합성 구조물을 만듭니다.</p>
+        <ul class="f-list">
+          <li><b>최소 토피 시공</b> — 도로 표층 1m, 철도 노반 0.5m</li>
+          <li>격벽철판 일체화 — <b>별도 방수재 없는 확실한 방수</b></li>
+          <li>대구경 강관 D1,500~2,300 — <b>전 토층 적용</b></li>
           <li>선도관 조정장치 — <b>곡선 선형 R=60m 정밀 시공</b></li>
         </ul>
       </div>
-      <img class="rv" src="img/concept.jpg" alt="T.S.M 공법 구조 개념도 — 강관 다발 내부에 철근콘크리트 박스 구조물 형성">
+      <div class="f-img" style="background-image:url('img/concept.jpg')" role="img" aria-label="T.S.M 공법 구조 개념도 — 강관 다발 내부에 철근콘크리트 박스 구조물 형성"></div>
     </div>
-
-    <div class="tech rev">
-      <div class="txt rv">
-        <div class="eyebrow" style="letter-spacing:.2em">02</div>
-        <div class="name"><b>EGR</b> 약액주입 공법</div>
-        <div class="en">Eco Grouting Rocket System</div>
-        <ul class="feat">
-          <li>실리카졸계 <b>저압 침투주입</b> — 지반 고결·차수 친환경 공법 · 특허 보유</li>
-          <li>Gel-Time 수초~수분 조절 — <b>토질 맞춤 한정주입</b>으로 차수 극대화</li>
-          <li>고결강도 20~60kg/㎠ · 해수·지하수 영향 없는 <b>반영구적 내구성</b></li>
-          <li>용탈 최소화로 <b>지하수 오염 저감</b> — 기존 SGR·LW 대비 개량</li>
+    <div class="feature light rv">
+      <div class="f-img" style="background-image:url('img/tunnel.jpg')" role="img" aria-label="추진 완료된 대구경 강관 내부"></div>
+      <div class="f-txt">
+        <div class="tag">EGR — Eco Grouting Rocket System</div>
+        <h3>지반은 단단하게,<br>지하수는 깨끗하게</h3>
+        <p class="desc">실리카졸계 저압 침투주입으로 지반을 고결하고 물길을 막는
+        특허 친환경 그라우팅입니다.</p>
+        <ul class="f-list">
+          <li>Gel-Time 수초~수분 조절 — <b>토질 맞춤 한정주입</b></li>
+          <li>고결강도 20~60kg/㎠ — <b>반영구적 내구성</b></li>
+          <li>해수·지하수 수질의 영향 없음</li>
+          <li>용탈 최소화 — <b>지하수 오염 저감</b>, 기존 SGR·LW 대비 개량</li>
         </ul>
       </div>
-      <img class="rv" src="img/tunnel.jpg" alt="추진 완료된 대구경 강관 내부">
     </div>
   </div>
 </section>
 
-<div class="gal">
-  <figure><img src="img/pipes.jpg" alt="추진기지의 대구경 강관" loading="lazy"><figcaption>대구경 강관 추진 · 추진기지</figcaption></figure>
-  <figure><img src="img/jobsite.jpg" alt="추진기지 가시설 현장" loading="lazy"><figcaption>추진기지 가시설 설치</figcaption></figure>
-  <figure><img src="img/complete.jpg" alt="완성된 하부통과 구조물" loading="lazy"><figcaption>하부통과 구조물 완성</figcaption></figure>
-</div>
+<section class="gray" id="site">
+  <div class="sec-head rv">
+    <div class="eyebrow">시공 현장</div>
+    <h2>현장이 증명합니다.</h2>
+  </div>
+  <div class="wrap gal">
+    <figure class="rv"><img src="img/pipes.jpg" alt="추진기지의 대구경 강관" loading="lazy"><figcaption>대구경 강관 추진 · 추진기지</figcaption></figure>
+    <figure class="rv"><img src="img/jobsite.jpg" alt="추진기지 가시설 현장" loading="lazy"><figcaption>추진기지 가시설 설치</figcaption></figure>
+    <figure class="rv"><img src="img/complete.jpg" alt="완성된 하부통과 구조물" loading="lazy"><figcaption>하부통과 구조물 완성</figcaption></figure>
+  </div>
+</section>
 
-<section class="paper" id="works">
-  <div class="wrap">
-    <div class="eyebrow rv">Projects</div>
-    <h2 class="rv">국가 기간시설 아래,<br>완수된 기록</h2>
-    <p class="lead rv">LH · 민자철도 · 고속도로 — 멈출 수 없는 시설의 하부에서 시공을 마쳤습니다.</p>
-    <div class="projects">
-      <div class="pj rv">
-        <div class="no">01</div>
-        <div>
-          <h3>고양 향동·덕은지구 공급처리시설 건설공사</h3>
-          <div class="meta">한국토지주택공사(LH) · 철도 하부통과 · 연장 <b>173.8 / 141.0 / 125.6m</b> · 추진관경 <b>D1,430</b></div>
-        </div>
-        <div class="tag">Railway</div>
-      </div>
-      <div class="pj rv">
-        <div class="no">02</div>
-        <div>
-          <h3>대곡~소사 복선전철 민간투자시설사업</h3>
-          <div class="meta">철도 하부통과 · 연장 <b>85.2m</b> · 구조물 <b>B6.0 × H5.5m</b> · 토피고 3.0m</div>
-        </div>
-        <div class="tag">Railway</div>
-      </div>
-      <div class="pj rv">
-        <div class="no">03</div>
-        <div>
-          <h3>동대구역 복합환승센터 건립사업</h3>
-          <div class="meta">연암·경암 구간 · 연장 <b>106.2m (R=60m)</b> · 구조물 <b>B5.1 × H3.0m</b> · 토피고 10.0m</div>
-        </div>
-        <div class="tag">Rock · Curve</div>
-      </div>
-      <div class="pj rv">
-        <div class="no">04</div>
-        <div>
-          <h3>평택~부여~익산(서부내륙) 고속도로 민간투자사업</h3>
-          <div class="meta">토사 구간 · 연장 15.0m · 구조물 <b>B25.9 × H5.2m</b> 초대형 단면 · 토피고 4.0m</div>
-        </div>
-        <div class="tag">Expressway</div>
-      </div>
+<section id="works">
+  <div class="sec-head rv">
+    <div class="eyebrow">시공실적</div>
+    <h2>멈출 수 없는 시설 아래,<br>완수된 기록.</h2>
+    <p class="sub">LH · 민자철도 · 고속도로 — 국가 기간시설 하부에서 시공을 마쳤습니다.</p>
+  </div>
+  <div class="wrap pjs">
+    <div class="pj rv">
+      <div><h3>고양 향동·덕은지구 공급처리시설 건설공사</h3>
+        <div class="meta">한국토지주택공사(LH) · 철도 하부통과 · 연장 <b>173.8 / 141.0 / 125.6m</b> · 추진관경 <b>D1,430</b></div></div>
+      <span class="badge">철도 하부통과</span>
+    </div>
+    <div class="pj rv">
+      <div><h3>대곡~소사 복선전철 민간투자시설사업</h3>
+        <div class="meta">철도 하부통과 · 연장 <b>85.2m</b> · 구조물 <b>B6.0 × H5.5m</b> · 토피고 3.0m</div></div>
+      <span class="badge">철도 하부통과</span>
+    </div>
+    <div class="pj rv">
+      <div><h3>동대구역 복합환승센터 건립사업</h3>
+        <div class="meta">연암·경암 구간 · 연장 <b>106.2m (R=60m)</b> · 구조물 <b>B5.1 × H3.0m</b> · 토피고 10.0m</div></div>
+      <span class="badge">암반 · 곡선</span>
+    </div>
+    <div class="pj rv">
+      <div><h3>평택~부여~익산(서부내륙) 고속도로 민간투자사업</h3>
+        <div class="meta">토사 구간 · 연장 15.0m · 구조물 <b>B25.9 × H5.2m</b> 초대형 단면 · 토피고 4.0m</div></div>
+      <span class="badge">고속도로 횡단</span>
     </div>
   </div>
 </section>
 
-<section class="dark" id="contact">
+<section class="contact" id="contact">
   <div class="wrap">
-    <div class="eyebrow rv">Contact</div>
-    <h2 class="rv">현장 조건을 보내주시면,<br>공법으로 답하겠습니다</h2>
-    <p class="lead rv">비개착 하부통과 · 공법 선정 · 견적 검토 — 어떤 단계든 좋습니다.</p>
-    <div class="contact-grid">
-      <div class="cb rv"><div class="t">Tel</div>
-        <p class="big"><a href="tel:051-702-2929">051 · 702 · 2929</a></p>
-        <p><a href="tel:010-6771-9999">010 · 6771 · 9999</a></p></div>
-      <div class="cb rv"><div class="t">E-mail</div>
+    <div class="rv">
+      <div class="eyebrow" style="color:#2997ff">문의</div>
+      <h2>현장 조건을 보내주세요.<br>공법으로 답하겠습니다.</h2>
+      <p class="sub">비개착 하부통과 · 공법 선정 · 견적 검토 — 어떤 단계든 좋습니다.</p>
+    </div>
+    <div class="c-grid">
+      <div class="c-card rv"><div class="t">Tel</div>
+        <p class="big"><a href="tel:051-702-2929">051-702-2929</a></p>
+        <p><a href="tel:010-6771-9999">010-6771-9999</a></p></div>
+      <div class="c-card rv"><div class="t">E-mail</div>
         <p><a href="mailto:jcenc2025@naver.com">jcenc2025@naver.com</a></p></div>
-      <div class="cb rv"><div class="t">본사</div>
+      <div class="c-card rv"><div class="t">본사</div>
         <p>부산광역시 해운대구 세실로 43,<br>지하층 116호</p></div>
-      <div class="cb rv"><div class="t">서울사무소</div>
+      <div class="c-card rv"><div class="t">서울사무소</div>
         <p>서울특별시 종로구 세종대로 149,<br>2층 2031호</p></div>
     </div>
   </div>
@@ -316,16 +305,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 <footer>
   <div class="wrap">
     <div>© 제이씨이앤씨 JCENC. All rights reserved.</div>
-    <div>Trenchless T.S.M · EGR Grouting</div>
+    <div>비개착 T.S.M 강관추진 · EGR 약액주입</div>
   </div>
 </footer>
 
 <noscript><style>.rv{opacity:1;transform:none}</style></noscript>
 <script>
-const hd = document.getElementById('hd');
-const onScroll = () => hd.classList.toggle('solid', scrollY > 40);
-addEventListener('scroll', onScroll, {passive:true}); onScroll();
-
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
