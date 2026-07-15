@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>시공실적 — 제이씨이앤씨(JCENC)</title>
+<meta name="description" content="철도 하부통과, 지하차도, 대단면 BOX, 곡선·암반 구간 — 제이씨이앤씨의 비개착 T.S.M 시공실적과 수행 유형.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --black:#0b0d10; --black2:#13161b; --white:#ffffff; --paper:#f4f5f7;
+  --ink:#15181d; --sub:#6b7683; --sub-d:#9aa5b1; --line:#e2e5e9; --line-d:rgba(255,255,255,.14);
+  --blue:#1c69d4; --blue-hi:#3f86e8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Pretendard Variable',Pretendard,'Malgun Gothic','Apple SD Gothic Neo',-apple-system,sans-serif;
+  color:var(--ink);background:var(--white);line-height:1.7;word-break:keep-all;font-weight:400}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--blue)}
+h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:250;letter-spacing:-.01em;line-height:1.25;margin:14px 0 18px;text-wrap:balance}
+.lead{color:var(--sub);max-width:620px;font-size:1.02rem;margin-bottom:64px}
+header{position:fixed;inset:0 0 auto;z-index:100;background:rgba(11,13,16,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-d)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:72px;color:#fff}
+.logo{display:flex;align-items:baseline;gap:12px}
+.logo .mark{font-size:1.3rem;font-weight:800;letter-spacing:.06em}
+.logo .mark b{color:var(--blue-hi);font-weight:800}
+.logo .kr{font-size:.7rem;letter-spacing:.3em;color:var(--sub-d)}
+nav{display:flex;gap:clamp(16px,3vw,38px);font-size:.85rem;font-weight:500}
+nav a{color:#cfd6dd;padding:6px 0;border-bottom:1px solid transparent;transition:.25s}
+nav a:hover,nav a.on{color:#fff;border-color:var(--blue-hi)}
+@media(max-width:640px){.logo .kr{display:none}nav{font-size:.76rem}}
+.pagehero{background:var(--black);color:#fff;padding:clamp(140px,20vh,200px) 0 clamp(60px,8vh,90px)}
+.pagehero h1{font-size:clamp(2rem,5vw,3.6rem);font-weight:200;line-height:1.2;letter-spacing:-.015em;margin:16px 0 18px}
+.pagehero h1 b{font-weight:600}
+.pagehero p{color:#c3ccd6;max-width:620px;font-weight:300}
+section{padding:clamp(80px,10vh,130px) 0}
+.dark{background:var(--black);color:#fff}
+.dark h2{color:#fff}
+.dark .lead{color:var(--sub-d)}
+.paper{background:var(--paper)}
+/* 실적 상세 카드 */
+.case{border:1px solid var(--line);padding:clamp(26px,4vw,44px);margin-bottom:28px;background:#fff}
+.case .top{display:flex;justify-content:space-between;gap:16px;align-items:baseline;flex-wrap:wrap;margin-bottom:8px}
+.case h3{font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:600;letter-spacing:-.01em}
+.case .tag{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);white-space:nowrap}
+.case .client{color:var(--sub);font-size:.9rem;margin-bottom:20px}
+.case table{width:100%;border-collapse:collapse;font-size:.92rem}
+.case th,.case td{padding:11px 10px;border-top:1px solid var(--line);text-align:left}
+.case th{width:150px;color:var(--sub);font-weight:500;font-size:.82rem;letter-spacing:.05em}
+.case td b{font-weight:650}
+.case .pt{margin-top:18px;font-size:.92rem;color:var(--ink);background:var(--paper);padding:14px 16px}
+.case .pt b{color:var(--blue)}
+/* 수행 유형 */
+.fields{border-top:1px solid var(--line-d)}
+.field{display:grid;grid-template-columns:minmax(200px,340px) 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--line-d);align-items:baseline}
+.field h3{font-size:1.15rem;font-weight:550;color:#fff}
+.field p{color:var(--sub-d);font-size:.92rem;max-width:640px;font-weight:300}
+@media(max-width:700px){.field{grid-template-columns:1fr;gap:6px}}
+.note{color:var(--sub);font-size:.88rem;border:1px solid var(--line);padding:20px 24px;margin-top:40px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;font-size:.86rem;font-weight:600;letter-spacing:.04em;background:var(--blue);color:#fff;transition:.25s}
+.btn:hover{background:var(--blue-hi)}
+footer{background:var(--black);color:var(--sub-d);font-size:.78rem;padding:34px 0;border-top:1px solid var(--line-d)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-weight:300;letter-spacing:.04em}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="index.html"><span class="mark"><b>JC</b>ENC</span><span class="kr">제이씨이앤씨</span></a>
+    <nav>
+      <a href="index.html#about">사업영역</a>
+      <a href="method.html">공법 상세</a>
+      <a href="works.html" class="on">시공실적</a>
+      <a href="index.html#contact">문의</a>
+    </nav>
+  </div>
+</header>
+
+<div class="pagehero">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--blue-hi)">Track Record</div>
+    <h1>멈출 수 없는 시설 아래,<br><b>완수된 기록</b></h1>
+    <p>운행 중인 철도, 흐르는 고속도로, 연암 지반과 R=60m 곡선 —
+    조건이 어려울수록 T.S.M의 무대였습니다.</p>
+  </div>
+</div>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="eyebrow rv">Selected Projects</div>
+    <h2 class="rv">대표 시공실적</h2>
+    <p class="lead rv">각 현장의 조건과 해법을 함께 기록합니다. 숫자는 실제 시공 스펙입니다.</p>
+
+    <div class="case rv">
+      <div class="top"><h3>고양 향동 · 덕은지구 공급처리시설 건설공사</h3><div class="tag">Railway · 대구경 다경간</div></div>
+      <div class="client">발주 한국토지주택공사(LH) · 철도 하부통과</div>
+      <table>
+        <tr><th>연장</th><td><b>173.8 / 141.0 / 125.6m</b> — 3개 구간</td></tr>
+        <tr><th>추진 관경</th><td><b>D1,430mm</b></td></tr>
+        <tr><th>토피고</th><td>10.5 ~ <b>1.5m</b> (저토피 구간 포함)</td></tr>
+      </table>
+      <div class="pt"><b>포인트</b> — 단일 구간 173.8m는 당사 최장 추진 기록. 운행 중인 철도 아래에서 토피 1.5m까지 내려가는 구간을 침하 없이 통과했습니다.</div>
+    </div>
+
+    <div class="case rv">
+      <div class="top"><h3>평택~부여~익산(서부내륙) 고속도로 민간투자사업</h3><div class="tag">Expressway · 초대형 단면</div></div>
+      <div class="client">민자 SPC · 고속도로 하부 BOX</div>
+      <table>
+        <tr><th>구조물</th><td><b>B25.9 × H5.2m</b> — 국내 최대급 초대형 단면</td></tr>
+        <tr><th>강관</th><td><b>D1,800mm</b> 대구경 루프</td></tr>
+        <tr><th>토피고</th><td>4.0m · 토사 구간</td></tr>
+      </table>
+      <div class="pt"><b>포인트</b> — 폭 25.9m 단면을 대구경 강관 루프로 형성. 대단면일수록 강관 수가 적고 이음부가 적은 대구경 방식의 우위가 뚜렷해집니다.</div>
+    </div>
+
+    <div class="case rv">
+      <div class="top"><h3>동대구역 복합환승센터 건립사업</h3><div class="tag">Rock · Curve R=60</div></div>
+      <div class="client">연암 · 경암 구간 통로</div>
+      <table>
+        <tr><th>연장</th><td><b>106.2m</b>, 곡선 <b>R=60m</b></td></tr>
+        <tr><th>구조물</th><td>B5.1 × H3.0m</td></tr>
+        <tr><th>토피고</th><td>10.0m · 연암 · 경암</td></tr>
+      </table>
+      <div class="pt"><b>포인트</b> — "강관추진은 직선 전용"이라는 통념을 깬 현장. 선도관 조정으로 R=60m 곡선을, 그것도 암반에서 완수했습니다.</div>
+    </div>
+
+    <div class="case rv">
+      <div class="top"><h3>대곡~소사 복선전철 민간투자시설사업</h3><div class="tag">Railway · BOX</div></div>
+      <div class="client">민자 SPC · 철도 하부통과</div>
+      <table>
+        <tr><th>연장</th><td><b>85.2m</b></td></tr>
+        <tr><th>구조물</th><td><b>B6.0 × H5.5m</b> BOX</td></tr>
+        <tr><th>토피고</th><td>3.0m</td></tr>
+      </table>
+      <div class="pt"><b>포인트</b> — 민자 철도사업의 공정 압박 속에서 하부통과 BOX를 무중단 시공. 민자 SPC 현장 프로세스에 대한 이해가 축적된 현장입니다.</div>
+    </div>
+
+    <div class="note rv">
+      실적증명서(발주처 확인분) · 현장별 상세 자료 · 구조 검토서는 요청 시 즉시 제공합니다.
+      상기 외 수행 현장(도시철도 정거장 구간 등)은 문의 주시면 안내드립니다.
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="eyebrow rv">Capability</div>
+    <h2 class="rv">수행 유형</h2>
+    <p class="lead rv">공기업 · 민자 SPC · 대형 건설사와 함께한 구조물 유형입니다.</p>
+    <div class="fields">
+      <div class="field rv"><h3>철도 하부통과</h3><p>운행선 아래 통로 · 관로 횡단. 노반 토피 0.5m급 저토피 대응. LH · 민자철도 SPC 수행.</p></div>
+      <div class="field rv"><h3>지하차도 · 통로박스</h3><p>도로 하부 BOX 추진 — 지하차도, 통로암거, 보도 · 자전거 통로.</p></div>
+      <div class="field rv"><h3>단지 진입도로</h3><p>택지 · 산업단지 조성 시 기존 도로 · 철도 하부 진입도로 개설.</p></div>
+      <div class="field rv"><h3>인입관로 · 도수시설</h3><p>상수 도수관로, 가스 · 전력 인입, 우수 BOX 관통 시공.</p></div>
+      <div class="field rv"><h3>수로 BOX · 취수장 하부</h3><p>하천 · 제방 하부 수로 구조물, 취수시설 하부통과.</p></div>
+      <div class="field rv"><h3>약액주입 · 그라우팅</h3><p>E.G.R 친환경 그라우팅 — 차수 · 지반보강, 비개착 병행 또는 단독 수행.</p></div>
+    </div>
+    <div style="margin-top:56px">
+      <a class="btn rv" href="index.html#contact">현장 조건 보내기 →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 제이씨이앤씨 JCENC. All rights reserved.</div>
+    <div><a href="index.html">홈</a> · <a href="method.html">공법 상세</a> · <a href="index.html#contact">문의</a></div>
+  </div>
+</footer>
+
+<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
+<script>
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+  }), {threshold:.15});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+} else {
+  document.querySelectorAll('.rv').forEach(el => el.classList.add('on'));
+}
+</script>
+</body>
+</html>

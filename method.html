@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T.S.M 공법 상세 — 제이씨이앤씨(JCENC)</title>
+<meta name="description" content="T.S.M 비개착 강관추진공법의 시공순서 9단계, 구조 형성 원리, 적용 범위, EGR 약액주입 — 제이씨이앤씨 공법 상세와 공법설명서 다운로드.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --black:#0b0d10; --black2:#13161b; --white:#ffffff; --paper:#f4f5f7;
+  --ink:#15181d; --sub:#6b7683; --sub-d:#9aa5b1; --line:#e2e5e9; --line-d:rgba(255,255,255,.14);
+  --blue:#1c69d4; --blue-hi:#3f86e8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Pretendard Variable',Pretendard,'Malgun Gothic','Apple SD Gothic Neo',-apple-system,sans-serif;
+  color:var(--ink);background:var(--white);line-height:1.7;word-break:keep-all;font-weight:400}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--blue)}
+h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:250;letter-spacing:-.01em;line-height:1.25;margin:14px 0 18px;text-wrap:balance}
+.lead{color:var(--sub);max-width:620px;font-size:1.02rem;margin-bottom:64px}
+header{position:fixed;inset:0 0 auto;z-index:100;background:rgba(11,13,16,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-d)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:72px;color:#fff}
+.logo{display:flex;align-items:baseline;gap:12px}
+.logo .mark{font-size:1.3rem;font-weight:800;letter-spacing:.06em}
+.logo .mark b{color:var(--blue-hi);font-weight:800}
+.logo .kr{font-size:.7rem;letter-spacing:.3em;color:var(--sub-d)}
+nav{display:flex;gap:clamp(16px,3vw,38px);font-size:.85rem;font-weight:500}
+nav a{color:#cfd6dd;padding:6px 0;border-bottom:1px solid transparent;transition:.25s}
+nav a:hover,nav a.on{color:#fff;border-color:var(--blue-hi)}
+@media(max-width:640px){.logo .kr{display:none}nav{font-size:.76rem}}
+.pagehero{background:var(--black);color:#fff;padding:clamp(140px,20vh,200px) 0 clamp(60px,8vh,90px)}
+.pagehero h1{font-size:clamp(2rem,5vw,3.6rem);font-weight:200;line-height:1.2;letter-spacing:-.015em;margin:16px 0 18px}
+.pagehero h1 b{font-weight:600}
+.pagehero p{color:#c3ccd6;max-width:620px;font-weight:300}
+section{padding:clamp(80px,10vh,130px) 0}
+.dark{background:var(--black);color:#fff}
+.dark h2{color:#fff}
+.dark .lead{color:var(--sub-d)}
+.paper{background:var(--paper)}
+/* 시공순서 */
+.steps{border-top:1px solid var(--line);counter-reset:st}
+.step{display:grid;grid-template-columns:88px 1fr;gap:clamp(14px,3vw,40px);padding:26px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.step .no{font-size:1.5rem;font-weight:200;color:var(--blue);font-variant-numeric:tabular-nums}
+.step h3{font-size:1.08rem;font-weight:600;margin-bottom:4px}
+.step p{color:var(--sub);font-size:.92rem;max-width:720px}
+@media(max-width:640px){.step{grid-template-columns:48px 1fr}}
+/* 사진 그리드 */
+.gal2{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:56px}
+@media(max-width:760px){.gal2{grid-template-columns:1fr}}
+.gal2 figure{position:relative;overflow:hidden;background:var(--black2)}
+.gal2 img{height:min(30vw,340px);width:100%;object-fit:cover;opacity:.94}
+@media(max-width:760px){.gal2 img{height:56vw}}
+.gal2 figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 20px 14px;font-size:.78rem;letter-spacing:.1em;color:#e6ebf0;background:linear-gradient(transparent,rgba(11,13,16,.82))}
+/* 스펙 표 */
+.spec{width:100%;border-collapse:collapse;font-size:.95rem}
+.spec th,.spec td{padding:16px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.spec th{width:220px;color:var(--sub);font-weight:500;font-size:.85rem;letter-spacing:.06em}
+.spec td b{font-weight:650}
+/* 차별점 */
+.diff{list-style:none;border-top:1px solid var(--line-d)}
+.diff li{padding:16px 0 16px 30px;border-bottom:1px solid var(--line-d);font-size:.95rem;font-weight:300;color:#c3ccd6;position:relative}
+.diff li::before{content:"";position:absolute;left:2px;top:27px;width:16px;height:1px;background:var(--blue-hi)}
+.diff b{color:#fff;font-weight:600}
+/* 자료실 */
+.dl{display:flex;align-items:center;justify-content:space-between;gap:20px;border:1px solid var(--line);padding:26px 28px;flex-wrap:wrap}
+.dl .t{font-weight:600;font-size:1.05rem}
+.dl .s{color:var(--sub);font-size:.86rem}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;font-size:.86rem;font-weight:600;letter-spacing:.04em;background:var(--blue);color:#fff;transition:.25s}
+.btn:hover{background:var(--blue-hi)}
+footer{background:var(--black);color:var(--sub-d);font-size:.78rem;padding:34px 0;border-top:1px solid var(--line-d)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-weight:300;letter-spacing:.04em}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="index.html"><span class="mark"><b>JC</b>ENC</span><span class="kr">제이씨이앤씨</span></a>
+    <nav>
+      <a href="index.html#about">사업영역</a>
+      <a href="method.html" class="on">공법 상세</a>
+      <a href="works.html">시공실적</a>
+      <a href="index.html#contact">문의</a>
+    </nav>
+  </div>
+</header>
+
+<div class="pagehero">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--blue-hi)">Technology in Detail</div>
+    <h1><b>T.S.M</b> — 강관으로 터널을 만드는<br>아홉 단계</h1>
+    <p>공용 중인 도로·철도 하부에 대구경 강관을 압입하고, 강관 내부를 일체화한 뒤 굴착하여
+    개착 없이 지하 구조물을 완성합니다. Tunnel of using Steel pipe Method.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow rv">Process</div>
+    <h2 class="rv">시공 순서 — 9단계</h2>
+    <p class="lead rv">추진기지에서 시작해 구조물 완성까지. 상부 교통은 전 과정에서 정상 소통합니다.</p>
+    <div class="steps">
+      <div class="step rv"><div class="no">01</div><div><h3>추진기지 가시설 설치</h3><p>강관을 밀어 넣을 발진기지와 반력벽을 설치합니다. 상부 교통에 영향이 없는 위치에 조성합니다.</p></div></div>
+      <div class="step rv"><div class="no">02</div><div><h3>강관 추진 (상부 · 측벽 압입)</h3><p>유압잭으로 대구경 강관(D1,200~3,000)을 수평 압입합니다. 선도관 조정장치로 정밀 선형을 유지하며, 곡선(R=60m) 시공 실적을 보유하고 있습니다.</p></div></div>
+      <div class="step rv"><div class="no">03</div><div><h3>강관 외부 그라우팅 (E.G.R)</h3><p>강관 외부 공극에 약액을 주입해 차수하고 주변 지반을 보강합니다. 침하를 원천 차단하는 공정입니다.</p></div></div>
+      <div class="step rv"><div class="no">04</div><div><h3>내부 보강폼 설치 · 격벽 일체화</h3><p>강관 사이 격벽철판을 용접 일체화합니다. 별도 방수재 없이 확실한 방수 구조가 형성됩니다.</p></div></div>
+      <div class="step rv"><div class="no">05</div><div><h3>강관 내 철골(H-Beam) 지보</h3><p>강관 내부에 H-Beam을 설치해 굴착 전 구조 강성을 확보합니다.</p></div></div>
+      <div class="step rv"><div class="no">06</div><div><h3>터널 내부 굴착</h3><p>일체화된 강관 루프의 보호 아래 내부를 굴착합니다. 저토피(도로 1.0m · 철도 노반 0.5m) 조건에서도 안전하게 진행됩니다.</p></div></div>
+      <div class="step rv"><div class="no">07</div><div><h3>기초 콘크리트 타설</h3><p>바닥 슬래브 기초를 타설합니다.</p></div></div>
+      <div class="step rv"><div class="no">08</div><div><h3>벽체 콘크리트 타설</h3><p>벽체를 타설해 강관과 철근콘크리트의 합성 구조물을 완성해 갑니다.</p></div></div>
+      <div class="step rv"><div class="no">09</div><div><h3>상부 슬래브 완성 · 지보 해체</h3><p>상부 슬래브 타설 후 가설 지보를 해체하면, 개착 한 번 없이 지하 구조물이 완성됩니다.</p></div></div>
+    </div>
+    <div class="gal2">
+      <figure><img src="img/method-base.jpg" alt="추진기지 가시설" loading="lazy"><figcaption>① 추진기지 가시설</figcaption></figure>
+      <figure><img src="img/method-yard.jpg" alt="대구경 강관 압입 추진기지 전경" loading="lazy"><figcaption>② 대구경 강관 압입</figcaption></figure>
+      <figure><img src="img/method-grout.jpg" alt="강관 외부 그라우팅" loading="lazy"><figcaption>③ 강관 외부 그라우팅 (E.G.R)</figcaption></figure>
+      <figure><img src="img/method-inside.jpg" alt="강관 내부 작업" loading="lazy"><figcaption>⑤~⑥ 강관 내부 지보 · 굴착</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="eyebrow rv">Why T.S.M</div>
+    <h2 class="rv">타 비개착 공법과<br>무엇이 다른가</h2>
+    <p class="lead rv">같은 "강관 루프"라도, 강관의 크기와 내부에서 할 수 있는 일이 다릅니다.</p>
+    <ul class="diff">
+      <li class="rv"><b>대구경 강관 = 작업 공간.</b> 소형 강관 다발 공법과 달리, 사람과 장비가 강관 안에 들어가 굴착 · 보강 · 하부지반 보강까지 수행합니다. 지상 작업이 불가능한 저토피 현장에서 유일하게 성립하는 접근입니다.</li>
+      <li class="rv"><b>격벽 일체화 방수.</b> 강관 사이를 격벽철판으로 용접 일체화 — 강관이 이격되는 구조에서 생기는 방수 취약점이 원천적으로 없습니다.</li>
+      <li class="rv"><b>이음부가 적어 공기 단축.</b> 대구경은 같은 단면을 더 적은 수의 강관으로 형성합니다. 압입 반복 횟수와 접합부가 줄어듭니다.</li>
+      <li class="rv"><b>전 토층 적용.</b> 토사 · 풍화암 · 연암(동대구역 연암·경암 실적) · 연약지반(E.G.R 병행)까지. 지장물 대처도 관 내부에서 직접 가능합니다.</li>
+      <li class="rv"><b>곡선 선형 대응.</b> 선도관 조정장치로 R=60m 곡선 시공을 완수한 실적을 보유합니다.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="eyebrow rv">Specifications</div>
+    <h2 class="rv">적용 범위</h2>
+    <p class="lead rv">숫자는 전부 실제 시공 실적 기준입니다.</p>
+    <table class="spec rv">
+      <tr><th>적용 강관 직경</th><td><b>D1,200 ~ 3,000mm</b> — 대구경 중심</td></tr>
+      <tr><th>최소 토피고</th><td>도로 <b>1.0m</b> · 철도 노반 <b>0.5m</b></td></tr>
+      <tr><th>단일 구간 최장 추진</th><td><b>173.8m</b> (고양 향동 · 덕은지구, D1,430)</td></tr>
+      <tr><th>최대 단면</th><td><b>B25.9 × H5.2m</b> (평택~부여~익산 고속도로, 강관 D1,800)</td></tr>
+      <tr><th>곡선 선형</th><td><b>R=60m</b> (동대구역 복합환승센터, 연암 · 경암 구간)</td></tr>
+      <tr><th>구조물 유형</th><td>BOX(지하차도 · 통로암거) · 원형관로(상수 · 인입) · 다경간 병렬</td></tr>
+      <tr><th>부대 공법</th><td>E.G.R 약액주입 (차수 · 지반보강, 친환경 실리카졸계) · SGR · LW</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow rv">Download</div>
+    <h2 class="rv">공법설명서</h2>
+    <p class="lead rv">공법 개요 · 시공순서 · 구조 검토 · 시공실적을 담은 공식 설명서입니다. 설계 검토와 견적 요청에 바로 활용하십시오.</p>
+    <div class="dl rv">
+      <div>
+        <div class="t">T.S.M 강관추진공법 설명서 (PDF)</div>
+        <div class="s">제이씨이앤씨 · 9MB · 공법 개요 / 시공순서 / 기술제안 / 시공실적</div>
+      </div>
+      <a class="btn" href="docs/JCENC_TSM_공법설명서.pdf" download>다운로드 →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 제이씨이앤씨 JCENC. All rights reserved.</div>
+    <div><a href="index.html">홈</a> · <a href="works.html">시공실적</a> · <a href="index.html#contact">문의</a></div>
+  </div>
+</footer>
+
+<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
+<script>
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+  }), {threshold:.15});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+} else {
+  document.querySelectorAll('.rv').forEach(el => el.classList.add('on'));
+}
+</script>
+</body>
+</html>
