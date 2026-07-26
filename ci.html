@@ -43,14 +43,22 @@ nav a:hover,nav a.on{color:#fff;border-color:var(--blue-hi)}
 @media(max-width:640px){.logo .kr{display:none}nav{font-size:.76rem}}
 
 /* hero */
-.hero{background:var(--black);color:#fff;padding:150px 0 90px;position:relative;overflow:hidden}
-.hero .wrap{position:relative;z-index:2}
-.hero .eyebrow{color:var(--blue-hi)}
-.hero h1{font-size:clamp(2rem,5.4vw,3.8rem);font-weight:200;letter-spacing:-.02em;line-height:1.12;margin:18px 0 22px;text-wrap:balance}
-.hero h1 b{font-weight:600}
-.hero p{color:#c3ccd6;max-width:560px;font-weight:300}
-.hero-logo{display:flex;justify-content:center;padding:56px 0 8px}
-.hero-logo img{width:min(360px,72vw)}
+.hero{background:var(--black);color:#fff;padding:130px 0 80px}
+.hero-stage{position:relative;max-width:1040px;margin:0 auto;border-radius:16px;overflow:hidden;border:1px solid var(--line-d)}
+.hero-stage img{width:100%;height:auto;display:block}
+.hero-stage .overlay{position:absolute;inset:0;display:flex;align-items:center;
+  background:linear-gradient(100deg,rgba(6,7,9,.9) 0%,rgba(6,7,9,.46) 46%,rgba(6,7,9,0) 74%)}
+.hero-stage .inner{padding:clamp(26px,5vw,64px);max-width:60%}
+.hero-stage .eyebrow{color:var(--blue-hi)}
+.hero-stage h1{font-size:clamp(1.5rem,3.4vw,2.8rem);font-weight:200;letter-spacing:-.02em;line-height:1.14;margin:14px 0 16px;text-wrap:balance}
+.hero-stage h1 b{font-weight:600}
+.hero-stage p{color:#c3ccd6;font-weight:300;font-size:clamp(.85rem,1.4vw,1rem)}
+@media(max-width:640px){
+  .hero-stage .overlay{background:linear-gradient(180deg,rgba(6,7,9,.72),rgba(6,7,9,.58))}
+  .hero-stage .inner{max-width:100%;padding:22px}
+  .hero-stage p{display:none}
+  .hero-stage h1{font-size:1.4rem;margin:8px 0 0}
+}
 
 section{padding:clamp(80px,11vh,130px) 0}
 .paper{background:var(--paper)}
@@ -136,12 +144,16 @@ footer a{color:#c3ccd6}
 
 <div class="hero">
   <div class="wrap">
-    <div class="eyebrow">Corporate Identity</div>
-    <h1>하나의 심볼,<br><b>땅을 관통하는 기술</b></h1>
-    <p>J와 C를 강관 단면의 이음선으로 엮었습니다. 원과 아크로만 그린 정밀한 기하 —
-    제이씨이앤씨가 지하를 지나는 방식 그대로입니다.</p>
+    <div class="hero-stage">
+      <img src="img/ci/emboss.jpg" alt="JCENC 로고 엠보싱 적용 예시" width="1376" height="768">
+      <div class="overlay"><div class="inner">
+        <div class="eyebrow">Corporate Identity</div>
+        <h1>하나의 심볼,<br><b>땅을 관통하는 기술</b></h1>
+        <p>J와 C를 강관 단면의 이음선으로 엮었습니다. 원과 아크로만 그린 정밀한 기하 —
+        제이씨이앤씨가 지하를 지나는 방식 그대로입니다.</p>
+      </div></div>
+    </div>
   </div>
-  <div class="hero-logo"><img src="img/ci/lockup_white.svg" alt="JCENC 로고 세로형"></div>
 </div>
 
 <!-- 심볼 의미 -->
