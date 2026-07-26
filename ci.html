@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corporate Identity — 제이씨이앤씨(JCENC)</title>
+<meta name="description" content="JCENC 로고 시스템 — J와 C를 강관 단면 이음선으로 엮은 심볼, 기하 구성, 색상 규정.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+:root{
+  --black:#0b0d10; --black2:#13161b; --white:#ffffff; --paper:#f4f5f7;
+  --ink:#15181d; --sub:#6b7683; --sub-d:#9aa5b1; --line:#e2e5e9; --line-d:rgba(255,255,255,.14);
+  --blue:#1c69d4; --blue-hi:#3f86e8;
+  /* CI 브랜드 색 */
+  --navy:#0B2447; --navy2:#16355F; --orange:#F26A21; --steel:#3A6EA5; --gray:#5B6470;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Pretendard Variable',Pretendard,'Malgun Gothic','Apple SD Gothic Neo',-apple-system,sans-serif;
+  color:var(--ink);background:var(--white);line-height:1.7;word-break:keep-all;font-weight:400}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--blue)}
+h2{font-size:clamp(1.7rem,3.6vw,2.7rem);font-weight:250;letter-spacing:-.01em;line-height:1.22;margin:14px 0 16px;text-wrap:balance}
+.lead{color:var(--sub);max-width:640px;font-size:1.02rem}
+
+/* header (홈페이지와 동일) */
+header{position:fixed;inset:0 0 auto;z-index:100;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
+header.solid{background:rgba(11,13,16,.9);backdrop-filter:blur(12px);border-color:var(--line-d)}
+.hd{max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,56px);display:flex;align-items:center;justify-content:space-between;height:72px;color:#fff}
+.logo{display:flex;align-items:center;gap:11px}
+.logo-mark{height:26px;width:auto;display:block}
+.logo .mark{font-size:1.22rem;font-weight:800;letter-spacing:.06em}
+.logo .kr{font-size:.7rem;letter-spacing:.3em;color:var(--sub-d)}
+nav{display:flex;gap:clamp(16px,3vw,38px);font-size:.85rem;font-weight:500}
+nav a{color:#cfd6dd;padding:6px 0;border-bottom:1px solid transparent;transition:.25s}
+nav a:hover,nav a.on{color:#fff;border-color:var(--blue-hi)}
+@media(max-width:640px){.logo .kr{display:none}nav{font-size:.76rem}}
+
+/* hero */
+.hero{background:var(--black);color:#fff;padding:150px 0 90px;position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:2}
+.hero .eyebrow{color:var(--blue-hi)}
+.hero h1{font-size:clamp(2rem,5.4vw,3.8rem);font-weight:200;letter-spacing:-.02em;line-height:1.12;margin:18px 0 22px;text-wrap:balance}
+.hero h1 b{font-weight:600}
+.hero p{color:#c3ccd6;max-width:560px;font-weight:300}
+.hero-logo{display:flex;justify-content:center;padding:56px 0 8px}
+.hero-logo img{width:min(360px,72vw)}
+
+section{padding:clamp(80px,11vh,130px) 0}
+.paper{background:var(--paper)}
+.dark{background:var(--black);color:#fff}
+.dark h2{color:#fff}.dark .lead{color:var(--sub-d)}
+
+/* 심볼 의미 */
+.meaning{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+@media(max-width:820px){.meaning{grid-template-columns:1fr}}
+.meaning .fig{background:#fff;border:1px solid var(--line);border-radius:20px;padding:56px;display:flex;justify-content:center}
+.meaning .fig img{width:min(300px,60vw)}
+.mlist{list-style:none;border-top:1px solid var(--line);margin-top:22px}
+.mlist li{padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:baseline}
+.mlist .k{font-weight:700;color:var(--navy);font-size:.92rem}
+.mlist .v{color:var(--sub);font-size:.95rem}
+
+/* 구성 */
+.constr{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,64px);align-items:center}
+@media(max-width:820px){.constr{grid-template-columns:1fr}}
+.constr img{width:100%}
+
+/* 변형 타일 */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:760px){.tiles{grid-template-columns:repeat(2,1fr)}}
+.tile{border:1px solid var(--line);border-radius:16px;padding:38px 20px;display:flex;flex-direction:column;align-items:center;gap:16px;background:#fff}
+.tile.on-dark{background:var(--navy);border-color:var(--navy)}
+.tile img{height:64px}
+.tile .cap{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray)}
+.tile.on-dark .cap{color:#9fb0c4}
+
+/* 색상 */
+.pal{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.sw{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.sw .chip{height:92px}
+.sw .meta{padding:12px 14px}
+.sw .nm{font-weight:600;font-size:14px}
+.sw .hex{font-size:12.5px;color:var(--gray);font-variant-numeric:tabular-nums;letter-spacing:.02em;text-transform:uppercase}
+
+/* 여백·오용 */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:16px;padding:34px;background:#fff}
+.card h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+.card p{color:var(--sub);font-size:.94rem}
+.clear{margin-top:18px;border:1px dashed var(--steel);border-radius:12px;padding:34px;display:flex;justify-content:center}
+.clear img{width:min(220px,60vw)}
+.dont{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px;font-size:.9rem;color:var(--sub)}
+.dont span{background:var(--paper);border:1px solid var(--line);border-radius:99px;padding:7px 14px}
+
+/* 워드마크 */
+.wm-lock{display:flex;gap:56px;flex-wrap:wrap;align-items:center;justify-content:center;padding:20px 0}
+.wm-lock img{height:150px}
+
+/* application */
+.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.app{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--paper);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:26px}
+.app.navy{background:var(--navy);border-color:var(--navy)}
+.app img{max-height:100%;max-width:100%}
+.app .fav{width:96px;height:96px;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+
+footer{background:var(--black);color:var(--sub-d);font-size:.8rem;padding:34px 0;border-top:1px solid var(--line-d)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-weight:300;letter-spacing:.04em}
+footer a{color:#c3ccd6}
+</style>
+</head>
+<body>
+
+<header id="hd">
+  <div class="hd">
+    <a class="logo" href="index.html">
+      <img class="logo-mark" src="img/logo-white.svg" alt="JCENC 로고" width="34" height="26">
+      <span class="mark">JCENC</span>
+      <span class="kr">제이씨이앤씨</span>
+    </a>
+    <nav>
+      <a href="index.html#about">사업영역</a>
+      <a href="index.html#method">공법</a>
+      <a href="index.html#works">실적</a>
+      <a href="ci.html" class="on">CI</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Corporate Identity</div>
+    <h1>하나의 심볼,<br><b>땅을 관통하는 기술</b></h1>
+    <p>J와 C를 강관 단면의 이음선으로 엮었습니다. 원과 아크로만 그린 정밀한 기하 —
+    제이씨이앤씨가 지하를 지나는 방식 그대로입니다.</p>
+  </div>
+  <div class="hero-logo"><img src="img/ci/lockup_white.svg" alt="JCENC 로고 세로형"></div>
+</div>
+
+<!-- 심볼 의미 -->
+<section>
+  <div class="wrap meaning">
+    <div>
+      <div class="eyebrow">Symbol</div>
+      <h2>강관 단면에서<br>온 형태</h2>
+      <p class="lead">두 개의 획을 나누는 얇은 이음선은 비개착 강관추진의 &lsquo;강관 단면&rsquo;을 상징합니다.
+      상단의 삼각형은 돛대처럼 세워져 전진과 성장을, C의 열린 곡선은 관통을 뜻합니다.</p>
+      <ul class="mlist">
+        <li><span class="k">J + C</span><span class="v">제이씨이앤씨의 두 이니셜을 하나의 흐름으로 결합</span></li>
+        <li><span class="k">삼각형 (상단)</span><span class="v">세워진 돛대 &mdash; 전진과 성장의 의지</span></li>
+        <li><span class="k">이음선</span><span class="v">강관 단면(파이프)을 나타내는 평행 라인</span></li>
+        <li><span class="k">비대칭</span><span class="v">얇은 윗팔과 굵은 아래 웨지 &mdash; 추진의 방향성과 힘</span></li>
+      </ul>
+    </div>
+    <div class="fig"><img src="img/ci/symbol_navy.svg" alt="JCENC 심볼"></div>
+  </div>
+</section>
+
+<!-- 구성 -->
+<section class="paper">
+  <div class="wrap constr">
+    <img src="img/ci/construction.png" alt="JCENC 로고 기하 구성도 — 동심원과 축으로 구성">
+    <div>
+      <div class="eyebrow">Construction</div>
+      <h2>원과 아크,<br>그리고 축</h2>
+      <p class="lead">모든 곡선은 중심과 반지름이 정의된 원호입니다. 두 개의 동심원과 대각 축 위에서
+      J와 C가 정확히 맞물리도록 설계했습니다. 어떤 크기에서도 형태가 흐트러지지 않습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 색상 변형 -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Color Variations</div>
+    <h2>네 가지 운용</h2>
+    <p class="lead" style="margin-bottom:40px">기본은 네이비. 강조가 필요할 때 오렌지. 어두운 배경엔 화이트, 단색 인쇄엔 블랙.</p>
+    <div class="tiles">
+      <div class="tile"><img src="img/ci/symbol_navy.svg" alt="네이비"><div class="cap">Navy · 기본</div></div>
+      <div class="tile"><img src="img/ci/symbol_orange.svg" alt="오렌지"><div class="cap">Orange · 강조</div></div>
+      <div class="tile on-dark"><img src="img/ci/symbol_white.svg" alt="화이트"><div class="cap">White · 리버스</div></div>
+      <div class="tile"><img src="img/ci/symbol_black.svg" alt="블랙"><div class="cap">Black · 단색</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 색상 팔레트 -->
+<section class="paper">
+  <div class="wrap">
+    <div class="eyebrow">Color Palette</div>
+    <h2>색상 규정</h2>
+    <div class="pal" style="margin-top:34px">
+      <div class="sw"><div class="chip" style="background:#0B2447"></div><div class="meta"><div class="nm">Deep Navy</div><div class="hex">#0B2447 · 기본</div></div></div>
+      <div class="sw"><div class="chip" style="background:#16355F"></div><div class="meta"><div class="nm">Navy 2</div><div class="hex">#16355F · 보조</div></div></div>
+      <div class="sw"><div class="chip" style="background:#F26A21"></div><div class="meta"><div class="nm">Signal Orange</div><div class="hex">#F26A21 · 강조</div></div></div>
+      <div class="sw"><div class="chip" style="background:#3A6EA5"></div><div class="meta"><div class="nm">Steel Blue</div><div class="hex">#3A6EA5 · 보조</div></div></div>
+      <div class="sw"><div class="chip" style="background:#5B6470"></div><div class="meta"><div class="nm">Gray</div><div class="hex">#5B6470 · 텍스트</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 워드마크 -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Wordmark &amp; Lockup</div>
+    <h2>조합 규정</h2>
+    <p class="lead">심볼 단독, 또는 &lsquo;JCENC&rsquo; 워드마크와 세로로 조합해 사용합니다.</p>
+    <div class="wm-lock">
+      <img src="img/ci/symbol_navy.svg" alt="심볼 단독" style="height:110px">
+      <img src="img/ci/lockup_navy.svg" alt="심볼 + JCENC 워드마크">
+    </div>
+  </div>
+</section>
+
+<!-- 여백·오용 + 응용 -->
+<section class="paper">
+  <div class="wrap">
+    <div class="eyebrow">Clear Space &amp; Application</div>
+    <h2>여백과 응용</h2>
+    <div class="grid2" style="margin-top:36px">
+      <div class="card">
+        <h3>최소 여백</h3>
+        <p>심볼 획 두께만큼의 여백을 사방에 확보합니다. 다른 요소가 이 영역을 침범하지 않습니다.</p>
+        <div class="clear"><img src="img/ci/symbol_navy.svg" alt="여백 규정"></div>
+      </div>
+      <div class="card">
+        <h3>피해야 할 사용</h3>
+        <p>비율 왜곡, 회전, 임의 색상, 그림자·효과 추가는 금지합니다.</p>
+        <div class="dont">
+          <span>✕ 비율 변형</span><span>✕ 회전</span><span>✕ 임의 색</span><span>✕ 그림자</span>
+        </div>
+        <h3 style="margin-top:26px">응용</h3>
+        <div class="apps" style="margin-top:12px">
+          <div class="app navy"><img class="fav" src="favicon.svg" alt="앱 아이콘"></div>
+          <div class="app"><img src="img/ci/symbol_navy.svg" alt="문서" style="width:120px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 제이씨이앤씨 JCENC. All rights reserved.</div>
+    <div><a href="index.html">← 홈으로</a></div>
+  </div>
+</footer>
+
+<script>
+const hd=document.getElementById('hd');
+const s=()=>hd.classList.toggle('solid',scrollY>40);
+addEventListener('scroll',s,{passive:true});s();
+</script>
+</body>
+</html>
