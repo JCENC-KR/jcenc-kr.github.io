@@ -28,16 +28,30 @@ h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:250;letter-spacing:-.01em;line-h
 header{position:fixed;inset:0 0 auto;z-index:100;transition:background .35s,border-color .35s;
   border-bottom:1px solid transparent}
 header.solid{background:rgba(11,13,16,.9);backdrop-filter:blur(12px);border-color:var(--line-d)}
-.hd{display:flex;align-items:center;justify-content:space-between;height:72px;color:#fff}
+.hd{position:relative;display:flex;align-items:center;justify-content:space-between;height:72px;color:#fff}
 .logo{display:flex;align-items:center;gap:11px}
 .logo-mark{height:26px;width:auto;display:block}
 .logo .mark{font-size:1.22rem;font-weight:800;letter-spacing:.06em}
 .logo .mark b{color:var(--blue-hi);font-weight:800}
 .logo .kr{font-size:.7rem;letter-spacing:.3em;color:var(--sub-d)}
 nav{display:flex;gap:clamp(16px,3vw,38px);font-size:.85rem;font-weight:500}
-nav a{color:#cfd6dd;padding:6px 0;border-bottom:1px solid transparent;transition:.25s}
+nav a{color:#cfd6dd;padding:6px 0;border-bottom:1px solid transparent;transition:.25s;white-space:nowrap}
 nav a:hover{color:#fff;border-color:var(--blue-hi)}
-@media(max-width:640px){.logo .kr{display:none}nav{font-size:.76rem}}
+.nav-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.nav-toggle span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;border-radius:2px;transition:transform .3s,opacity .3s}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:760px){
+  .logo .kr{display:none}
+  .nav-toggle{display:block}
+  nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
+    background:rgba(11,13,16,.98);backdrop-filter:blur(14px);border-top:1px solid var(--line-d);
+    max-height:0;overflow:hidden;transition:max-height .35s ease;font-size:1rem}
+  nav.open{max-height:78vh}
+  nav a{padding:16px 22px;border-bottom:1px solid var(--line-d);color:#e6ebf0}
+  nav a:hover{border-color:var(--line-d)}
+}
 
 /* ── hero ── */
 .hero{position:relative;min-height:60svh;display:flex;align-items:flex-end;color:#fff;
@@ -163,7 +177,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <span class="mark">JCENC</span>
       <span class="kr">제이씨이앤씨</span>
     </a>
-    <nav>
+    <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav">
       <a href="#about">사업영역</a>
       <a href="method.html">공법 상세</a>
       <a href="works.html">공법 실적</a>
@@ -341,6 +358,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 const hd = document.getElementById('hd');
 const onScroll = () => hd.classList.toggle('solid', scrollY > 40);
 addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+// 모바일 햄버거 메뉴
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.getElementById('nav');
+if (navToggle && navMenu) {
+  const setNav = open => { navMenu.classList.toggle('open', open); navToggle.setAttribute('aria-expanded', open); navToggle.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기'); };
+  navToggle.addEventListener('click', () => setNav(!navMenu.classList.contains('open')));
+  navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
+}
 
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(es => es.forEach(e => {

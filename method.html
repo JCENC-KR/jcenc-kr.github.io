@@ -23,15 +23,29 @@ a{text-decoration:none;color:inherit}
 h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:250;letter-spacing:-.01em;line-height:1.25;margin:14px 0 18px;text-wrap:balance}
 .lead{color:var(--sub);max-width:620px;font-size:1.02rem;margin-bottom:64px}
 header{position:fixed;inset:0 0 auto;z-index:100;background:rgba(11,13,16,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-d)}
-.hd{display:flex;align-items:center;justify-content:space-between;height:72px;color:#fff}
+.hd{position:relative;display:flex;align-items:center;justify-content:space-between;height:72px;color:#fff}
 .logo{display:flex;align-items:baseline;gap:12px}
 .logo .mark{font-size:1.3rem;font-weight:800;letter-spacing:.06em}
 .logo .mark b{color:var(--blue-hi);font-weight:800}
 .logo .kr{font-size:.7rem;letter-spacing:.3em;color:var(--sub-d)}
 nav{display:flex;gap:clamp(16px,3vw,38px);font-size:.85rem;font-weight:500}
-nav a{color:#cfd6dd;padding:6px 0;border-bottom:1px solid transparent;transition:.25s}
+nav a{color:#cfd6dd;padding:6px 0;border-bottom:1px solid transparent;transition:.25s;white-space:nowrap}
 nav a:hover,nav a.on{color:#fff;border-color:var(--blue-hi)}
-@media(max-width:640px){.logo .kr{display:none}nav{font-size:.76rem}}
+.nav-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.nav-toggle span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;border-radius:2px;transition:transform .3s,opacity .3s}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:760px){
+  .logo .kr{display:none}
+  .nav-toggle{display:block}
+  nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
+    background:rgba(11,13,16,.98);backdrop-filter:blur(14px);border-top:1px solid var(--line-d);
+    max-height:0;overflow:hidden;transition:max-height .35s ease;font-size:1rem}
+  nav.open{max-height:78vh}
+  nav a{padding:16px 22px;border-bottom:1px solid var(--line-d);color:#e6ebf0}
+  nav a:hover,nav a.on{border-color:var(--line-d)}
+}
 .pagehero{background:var(--black);color:#fff;padding:clamp(140px,20vh,200px) 0 clamp(60px,8vh,90px)}
 .pagehero h1{font-size:clamp(2rem,5vw,3.6rem);font-weight:200;line-height:1.2;letter-spacing:-.015em;margin:16px 0 18px}
 .pagehero h1 b{font-weight:600}
@@ -83,7 +97,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 <header>
   <div class="wrap hd">
     <a class="logo" href="index.html"><span class="mark"><b>JC</b>ENC</span><span class="kr">제이씨이앤씨</span></a>
-    <nav>
+    <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav">
       <a href="index.html#about">사업영역</a>
       <a href="method.html" class="on">공법 상세</a>
       <a href="works.html">공법 실적</a>
@@ -183,6 +200,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 
 <noscript><style>.rv{opacity:1;transform:none}</style></noscript>
 <script>
+(function(){const t=document.querySelector('.nav-toggle'),m=document.getElementById('nav');if(!t||!m)return;
+const setNav=o=>{m.classList.toggle('open',o);t.setAttribute('aria-expanded',o);t.setAttribute('aria-label',o?'메뉴 닫기':'메뉴 열기');};
+t.addEventListener('click',()=>setNav(!m.classList.contains('open')));
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setNav(false)));})();
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
