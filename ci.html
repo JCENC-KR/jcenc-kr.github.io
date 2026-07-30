@@ -145,6 +145,18 @@ footer{background:var(--black);color:var(--sub-d);font-size:.8rem;padding:34px 0
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-weight:300;letter-spacing:.04em}
 footer a{color:#c3ccd6}
 </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CC78M09Q45"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-CC78M09Q45');
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a');if(!a)return;
+  var href=a.getAttribute('href')||'';
+  if(/\.pdf$/i.test(href)) gtag('event','file_download',{file_name:href.split('/').pop(),link_url:href});
+  else if(href.indexOf('mailto:')===0) gtag('event','contact_email',{link_url:href});
+  else if(href.indexOf('tel:')===0) gtag('event','contact_call',{link_url:href});
+});
+</script>
 </head>
 <body>
 
