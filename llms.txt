@@ -31,6 +31,7 @@
 - [홈](https://jcenc.co.kr/): 회사 개요·사업영역
 - [공법 상세](https://jcenc.co.kr/method.html): T.S.M 시공순서 9단계, 적용 범위, 공법설명서 PDF 다운로드
 - [공법 실적](https://jcenc.co.kr/works.html): 철도 하부통과·초대형 단면·곡선 암반 등 현장 기록
+- [기술 FAQ](https://jcenc.co.kr/faq.html): 최소 토피고·최대 연장·곡선 가능 여부 등 설계 실무 질문 12개에 대한 답
 
 ## 기술블로그
 
