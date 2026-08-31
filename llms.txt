@@ -1,14 +1,14 @@
 # 제이씨이앤씨 (JCENC)
 
-> 제이씨이앤씨(주)는 비개착 T.S.M 강관추진공법과 E.G.R 약액주입공법 전문 기업입니다. 운행 중인 철도·공용 중인 도로를 멈추지 않고 그 하부에 지하 구조물(지하차도·통로박스·인입관로·수로 BOX)을 완성합니다.
-> JCENC is a Korean specialty contractor for trenchless (non-open-cut) construction, specializing in the T.S.M large-diameter steel pipe roof method and E.G.R chemical grouting.
+> 제이씨이앤씨(주)는 비개착 특수공법 전문 기업입니다. 세 가지 사업 — ①T.S.M 지하차도(지하차도·통로박스·철도횡단 구조물) ②EGR 그라우팅(차수·지반보강) ③관추진공사(강관 압입 관로, D800~2,600) — 를 세 가지 등록특허 기반 공법으로 수행하며, 운행 중인 철도·공용 중인 도로를 멈추지 않고 시공합니다.
+> JCENC is a Korean specialty contractor for trenchless (non-open-cut) construction: T.S.M pipe-roof underpass structures, E.G.R chemical grouting, and pipe jacking (D800–2,600 steel pipes).
 
 ## 핵심 정보
 
 - 회사명: 제이씨이앤씨주식회사 (JCENC Co., Ltd.)
-- 전문 분야: 비개착 공법(강관추진·압입), 약액주입(E.G.R·SGR·LW)
-- 주력 공법: T.S.M (Tunnel of using Steel pipe Method) — 대구경 강관 루프를 압입해 개착 없이 지하 구조물을 형성하는 비개착 공법
-- 수행 유형: 철도 하부통과, 지하차도·통로박스, 단지 진입도로, 인입관로·도수시설, 수로 BOX·취수장 하부통과
+- 사업영역(3분류): ①T.S.M 지하차도 — 지하차도·통로박스·철도횡단 구조물 ②EGR 그라우팅 — 차수·지반보강 약액주입(E.G.R·SGR·LW) ③관추진공사 — 강관 압입 관로(상수·하수·전력·가스, D800~2,600, 연장 제약 없음)
+- 주력 공법: T.S.M (Tunnel of using Steel pipe Method) — 대구경 강관 루프를 압입해 개착 없이 지하 구조물을 형성하는 비개착 공법. 세 공법 모두 등록특허 기반(특허 통상실시권)
+- 수행 유형: 철도 하부통과, 지하차도·통로박스, 단지 진입도로, 관추진 관로(인입·도수), 수로 BOX·취수장 하부통과, 차수·지반보강 그라우팅
 
 ## T.S.M 공법 적용 범위 (실제 공법 적용 현장 기준)
 
@@ -31,7 +31,7 @@
 - [홈](https://jcenc.co.kr/): 회사 개요·사업영역
 - [공법 상세](https://jcenc.co.kr/method.html): T.S.M 시공순서 9단계, 적용 범위, 공법설명서 PDF 다운로드
 - [공법 실적](https://jcenc.co.kr/works.html): 철도 하부통과·초대형 단면·곡선 암반 등 현장 기록
-- [기술 FAQ](https://jcenc.co.kr/faq.html): 최소 토피고·최대 연장·곡선 가능 여부 등 설계 실무 질문 12개에 대한 답
+- [기술 FAQ](https://jcenc.co.kr/faq.html): 최소 토피고·최대 연장·곡선 가능 여부·관추진 여부 등 설계 실무 질문 13개에 대한 답
 
 ## 기술블로그
 
